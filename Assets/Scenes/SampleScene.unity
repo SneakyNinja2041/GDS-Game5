@@ -6498,7 +6498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1174975354}
-  walkSpeed: 10
+  walkSpeed: 15
   gravity: 0
   jumpHeight: 1
   slopeForce: 5
@@ -6587,7 +6587,8 @@ Transform:
   m_LocalPosition: {x: -0.16, y: -3.28, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1929268330}
   m_Father: {fileID: 1174975355}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1369407751
@@ -7086,12 +7087,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929268329}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.685, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 4.9400005, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1174975355}
+  m_Father: {fileID: 1369407750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1941546600 stripped
 Transform:
@@ -7540,9 +7541,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8484660829168598604, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499921785}
-    - targetCorrespondingSourceObject: {fileID: 8484660829168598604, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1929268330}
     - targetCorrespondingSourceObject: {fileID: 8484660829168598604, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1369407750}

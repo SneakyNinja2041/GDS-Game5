@@ -37,15 +37,40 @@ public class ElementAttack : MonoBehaviour
         if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha1))
         {
             countdownTimer = countdownInterval;
-            ShootBullet();
+            ShootEarth();
+
+        }
+
+        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha2))
+        {
+            countdownTimer = countdownInterval;
+            ShootFire();
+
+        }
+
+        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha3))
+        {
+            countdownTimer = countdownInterval;
+            ShootElectricity();
 
         }
     }
 
-    private void ShootBullet()
+    private void ShootEarth()
     {
-        //audioSource.PlayOneShot(shootSound);
         Instantiate(earthPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
+        //instantiate means to spawn, quaternion means rotation
+    }
+
+    private void ShootFire()
+    {
+        Instantiate(firePrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
+        //instantiate means to spawn, quaternion means rotation
+    }
+
+    private void ShootElectricity()
+    {
+        Instantiate(electricityPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
         //instantiate means to spawn, quaternion means rotation
     }
 }
