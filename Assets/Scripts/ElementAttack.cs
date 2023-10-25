@@ -6,7 +6,7 @@ public class ElementAttack : MonoBehaviour
 {
     public GameObject earthPrefab;
     public GameObject firePrefab;
-    //public GameObject waterPrefab;
+    public GameObject waterPrefab;
     public GameObject electricityPrefab;
     public Transform elementSpawnPoint;
     public float countdownInterval;
@@ -54,6 +54,13 @@ public class ElementAttack : MonoBehaviour
             ShootElectricity();
 
         }
+
+        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha4))
+        {
+            countdownTimer = countdownInterval;
+            ShootWater();
+
+        }
     }
 
     private void ShootEarth()
@@ -71,6 +78,12 @@ public class ElementAttack : MonoBehaviour
     private void ShootElectricity()
     {
         Instantiate(electricityPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
+        //instantiate means to spawn, quaternion means rotation
+    }
+
+    private void ShootWater()
+    {
+        Instantiate(waterPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
         //instantiate means to spawn, quaternion means rotation
     }
 }

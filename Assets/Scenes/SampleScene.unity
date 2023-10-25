@@ -6553,6 +6553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earthPrefab: {fileID: 5659728105837315270, guid: b8be432a16ca9784bb3aecf3e45ac847, type: 3}
   firePrefab: {fileID: 154381487522287818, guid: be63e628f8cb3734cada1a875d413d60, type: 3}
+  waterPrefab: {fileID: 3732501792287888479, guid: f8869f806eb558c4ca03a9a80b900f8e, type: 3}
   electricityPrefab: {fileID: 2027621235428628998, guid: e5e573663dd2676439c7bf9a1448b8bd, type: 3}
   elementSpawnPoint: {fileID: 1929268330}
   countdownInterval: 1
