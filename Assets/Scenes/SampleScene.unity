@@ -6539,6 +6539,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8484660829168598604, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
   m_PrefabInstance: {fileID: 9123697495797441511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174975356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174975352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d09344a7711ce4882520420341b931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earthPrefab: {fileID: 5659728105837315270, guid: b8be432a16ca9784bb3aecf3e45ac847, type: 3}
+  firePrefab: {fileID: 154381487522287818, guid: be63e628f8cb3734cada1a875d413d60, type: 3}
+  electricityPrefab: {fileID: 2027621235428628998, guid: e5e573663dd2676439c7bf9a1448b8bd, type: 3}
+  elementSpawnPoint: {fileID: 1929268330}
+  countdownInterval: 1
 --- !u!1 &1369407749
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,6 +7553,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9148010129339426038, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1174975353}
+    - targetCorrespondingSourceObject: {fileID: 9148010129339426038, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174975356}
     - targetCorrespondingSourceObject: {fileID: 5704801284017861221, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2049440379}
