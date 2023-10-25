@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
-    public float walkSpeed = 3f;
-    public float sprintSpeed = 6f;
-    public float crouchSpeed = 2f;
-    public float gravity = -9.81f;
+    public float walkSpeed = 10f;
+    //public float sprintSpeed = 15f;
+    //public float crouchSpeed = 5f;
+    public float gravity = 0f;
     public float jumpHeight = 1f;
     public float slopeForce = 5f;
     public float slopeRayLength = 1f;
@@ -20,12 +20,9 @@ public class PlayerController : MonoBehaviour
     private Quaternion startRotation;
     private Vector3 velocity;
     private bool isGrounded;
-    private bool isSprinting;
-
-    //private bool isCaught = false;
+    //private bool isSprinting;
 
     private bool canMove = true; // Flag to track if the player is allowed to move
-    //private bool isCaught = false; // Flag to track if the player has been caught
 
     private void Awake()
     {
@@ -41,11 +38,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Debug.Log("Space pressed!");
-        //}
-
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -89,7 +81,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // If the player is not allowed to move, set x and z to 0 to stop movement
             x = 0f;
             z = 0f;
         }
