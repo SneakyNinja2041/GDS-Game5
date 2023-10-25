@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     private bool canMove = true; // Flag to track if the player is allowed to move
 
+    //public float rotationSpeed = 5f;
+
+
     private void Awake()
     {
         Debug.Log("Awake method called!");
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour
         float x = 0f;
         float z = 0f;
 
+        
         if (canMove)
         {
             // Using GetKey to check for arrow keys directly
@@ -87,6 +91,12 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
+
+        //if (move != Vector3.zero)
+        //{
+        //    Quaternion targetRotation = Quaternion.LookRotation(move, Vector3.up);
+        //    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        //}
 
 
         velocity.y += gravity * Time.deltaTime;
