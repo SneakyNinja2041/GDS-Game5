@@ -12,30 +12,27 @@ public class BossDrop : MonoBehaviour
     public bool isFireDrop;
     public bool isWaterDrop;
 
-    public int bossesKilled;
 
     private void Start()
     {
         isLightningDrop = false;
         isFireDrop = false;
         isWaterDrop = false;
-
-        bossesKilled = 0;
     }
 
     private void Update()
     {
-        if (bossesKilled == 1)
+        if (isLightningDrop == true)
         {
-            // whatever the first drop is spawns
+            lightningDropPrefab.SetActive(true);
         }
-        if (bossesKilled == 2)
+        if (isWaterDrop == true)
         {
-            // whateber the second drop is
+            waterDropPrefab.SetActive(true);
         }
-        if (bossesKilled == 3)
+        if (isFireDrop == true)
         {
-            // whatever the third boss fight drops
+            fireDropPrefab.SetActive(true);
         }
 
     }

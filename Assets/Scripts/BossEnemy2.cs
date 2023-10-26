@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossEnemy : MonoBehaviour
+public class BossEnemy2 : MonoBehaviour
 {
+    public Transform target;
+    public Rigidbody rb;
 
     public int currentHealth;
     public int maxHealth = 50;
+
+    public GameObject battleCube;
 
     public Slider bossHealthBar;
 
@@ -36,17 +40,16 @@ public class BossEnemy : MonoBehaviour
             // death audio/animation and stuff
             // spawn the bossDropPrefab
 
-            bossDrop.bossesKilled++;
+            bossDrop.isLightningDrop = true;
+            battleCube.SetActive(false);
         }
 
         if (cam.isBossFight == true)
         {
-
-            currentHealth = maxHealth;
             bossHealthBar.value = currentHealth;
         }
 
-
+        transform.LookAt(target);
     }
 
 }

@@ -20,7 +20,7 @@ public class BossFight : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
