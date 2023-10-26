@@ -119,12 +119,12 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Time.timeScale = 0f;
-            gameOverUI.SetActive(true);
-        }
-    }
+    //private void OnTriggerEnter(Collider collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Enemy"))
+    //    {
+    //        Time.timeScale = 0f;
+    //        gameOverUI.SetActive(true);
+    //    }
+    //}
 }
