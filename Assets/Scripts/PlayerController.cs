@@ -26,10 +26,7 @@ public class PlayerController : MonoBehaviour
 
     //public float rotationSpeed = 5f;
 
-    public GameObject fireUI;
-    public GameObject electricityUI;
-    public GameObject waterUI;
-    public GameObject earthUI;
+    public GameObject gameOverUI;
 
     private void Awake()
     {
@@ -122,29 +119,12 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    //private void OnTriggerEnter(Collider collision)
-    //{
-    //    if (collision.gameObject.CompareTag("WaterPickup"))
-    //    {
-    //        Destroy(collision.gameObject);
-    //        waterUI.SetActive(true);
-    //    }
-    //    if (collision.gameObject.CompareTag("ElectricityPickup"))
-    //    {
-    //        Destroy(collision.gameObject);
-    //        electricityUI.SetActive(true);
-    //    }
-    //    if (collision.gameObject.CompareTag("FirePickup"))
-    //    {
-    //        Destroy(collision.gameObject);
-    //        fireUI.SetActive(true);
-    //    }
-
-    //    //if (collision.gameObject.CompareTag("SideCollision"))
-    //    //{
-    //    //   
-    //    //}
-
-        
-    //}
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Time.timeScale = 0f;
+            gameOverUI.SetActive(true);
+        }
+    }
 }
