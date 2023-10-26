@@ -12,6 +12,7 @@ TagManager:
   - ElectricityPickup
   - Health
   - Environment
+  - End
   layers:
   - Default
   - TransparentFX
