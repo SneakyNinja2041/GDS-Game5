@@ -23017,9 +23017,9 @@ MonoBehaviour:
   waterPrefab: {fileID: 3732501792287888479, guid: f8869f806eb558c4ca03a9a80b900f8e, type: 3}
   electricityPrefab: {fileID: 2027621235428628998, guid: e5e573663dd2676439c7bf9a1448b8bd, type: 3}
   elementSpawnPoint: {fileID: 1929268330}
-  earthCountdownInterval: 1
-  fireCountdownInterval: 2
-  electricityCountdownInterval: 3
+  earthCountdownInterval: 0.5
+  fireCountdownInterval: 1
+  electricityCountdownInterval: 2
   waterCountdownInterval: 0
   fireUI: {fileID: 729780544}
   electricityUI: {fileID: 1559498999}
