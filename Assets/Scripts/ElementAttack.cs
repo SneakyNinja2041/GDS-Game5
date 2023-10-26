@@ -27,15 +27,12 @@ public class ElementAttack : MonoBehaviour
     public GameObject waterUI;
     public GameObject earthUI;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateShooting();
@@ -45,6 +42,9 @@ public class ElementAttack : MonoBehaviour
     private void UpdateShooting()
     {
         earthCountdownTimer -= Time.deltaTime;
+        fireCountdownTimer -= Time.deltaTime;
+        waterCountdownTimer -= Time.deltaTime;
+        electricityCountdownTimer -= Time.deltaTime;
 
         if (earthUI.activeSelf)
         {
@@ -62,7 +62,7 @@ public class ElementAttack : MonoBehaviour
             {
                 fireCountdownTimer = fireCountdownInterval;
                 ShootFire();
-
+                Debug.Log("Fire key pressed");
             }
         }
 
@@ -91,24 +91,20 @@ public class ElementAttack : MonoBehaviour
     private void ShootEarth()
     {
         Instantiate(earthPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
-        //instantiate means to spawn, quaternion means rotation
     }
 
     private void ShootFire()
     {
         Instantiate(firePrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
-        //instantiate means to spawn, quaternion means rotation
     }
 
     private void ShootElectricity()
     {
         Instantiate(electricityPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
-        //instantiate means to spawn, quaternion means rotation
     }
 
     private void ShootWater()
     {
         Instantiate(waterPrefab, elementSpawnPoint.position, elementSpawnPoint.rotation);
-        //instantiate means to spawn, quaternion means rotation
     }
 }
