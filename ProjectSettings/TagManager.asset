@@ -10,6 +10,7 @@ TagManager:
   - FirePickup
   - WaterPickup
   - ElectricityPickup
+  - Health
   layers:
   - Default
   - TransparentFX
