@@ -662,7 +662,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 2
   rb: {fileID: 2407331788778665270}
-  healthDrop: {fileID: 7476170642044958504, guid: 4fd63fc635bfe6d448f67b9e3cd8c266, type: 3}
+  healthDrop: {fileID: 7476170642044958504, guid: ca8c78d04cf1b9447ac4428242496199, type: 3}
   enemyHealth: {fileID: 5371393928317111867}
   currentHealth: 0
   maxHealth: 20
