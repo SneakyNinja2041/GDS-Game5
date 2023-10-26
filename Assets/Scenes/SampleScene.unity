@@ -6160,6 +6160,7 @@ GameObject:
   - component: {fileID: 322546174}
   - component: {fileID: 322546173}
   - component: {fileID: 322546172}
+  - component: {fileID: 322546176}
   m_Layer: 0
   m_Name: End
   m_TagString: End
@@ -6254,6 +6255,21 @@ Transform:
   - {fileID: 1803686230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322546176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322546171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d4a6cf99a986548854c4f864245734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireUI: {fileID: 729780544}
+  electricityUI: {fileID: 1559498999}
+  end: {fileID: 322546171}
 --- !u!4 &331611005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf5c3539fd88aa24ba7b64f831a88a19, type: 3}
