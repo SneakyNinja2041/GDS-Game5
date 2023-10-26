@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public GameObject fireUI;
     public GameObject electricityUI;
     public GameObject waterUI;
+    public GameObject earthUI;
 
     private void Awake()
     {

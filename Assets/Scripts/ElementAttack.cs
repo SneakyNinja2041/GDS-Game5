@@ -9,11 +9,23 @@ public class ElementAttack : MonoBehaviour
     public GameObject waterPrefab;
     public GameObject electricityPrefab;
     public Transform elementSpawnPoint;
-    public float countdownInterval;
-    private float countdownTimer;
 
-    //public AudioClip shootSound;
-    //private AudioSource audioSource;
+    public float earthCountdownInterval;
+    private float earthCountdownTimer;
+
+    public float fireCountdownInterval;
+    private float fireCountdownTimer;
+
+    public float electricityCountdownInterval;
+    private float electricityCountdownTimer;
+
+    public float waterCountdownInterval;
+    private float waterCountdownTimer;
+
+    public GameObject fireUI;
+    public GameObject electricityUI;
+    public GameObject waterUI;
+    public GameObject earthUI;
 
 
     // Start is called before the first frame update
@@ -32,35 +44,48 @@ public class ElementAttack : MonoBehaviour
 
     private void UpdateShooting()
     {
-        countdownTimer -= Time.deltaTime;
+        earthCountdownTimer -= Time.deltaTime;
 
-        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha1))
+        if (earthUI.activeSelf)
         {
-            countdownTimer = countdownInterval;
-            ShootEarth();
+            if (earthCountdownTimer <= 0 && Input.GetKey(KeyCode.Alpha1))
+            {
+                earthCountdownTimer = earthCountdownInterval;
+                ShootEarth();
 
+            }
         }
 
-        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha2))
+        if (fireUI.activeSelf)
         {
-            countdownTimer = countdownInterval;
-            ShootFire();
+            if (fireCountdownTimer <= 0 && Input.GetKey(KeyCode.Alpha2))
+            {
+                fireCountdownTimer = fireCountdownInterval;
+                ShootFire();
 
+            }
         }
 
-        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha3))
+        if (electricityUI.activeSelf)
         {
-            countdownTimer = countdownInterval;
-            ShootElectricity();
+            if (electricityCountdownTimer <= 0 && Input.GetKey(KeyCode.Alpha3))
+            {
+                electricityCountdownTimer = electricityCountdownInterval;
+                ShootElectricity();
 
+            }
         }
-
-        if (countdownTimer <= 0 && Input.GetKey(KeyCode.Alpha4))
+        
+        if (waterUI.activeSelf)
         {
-            countdownTimer = countdownInterval;
-            ShootWater();
+            if (waterCountdownTimer <= 0 && Input.GetKey(KeyCode.Alpha4))
+            {
+                waterCountdownTimer = waterCountdownInterval;
+                ShootWater();
 
+            }
         }
+        
     }
 
     private void ShootEarth()
