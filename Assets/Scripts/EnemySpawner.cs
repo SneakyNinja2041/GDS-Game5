@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private float spawnRadiusX = 10f;
-    [SerializeField] private float spawnRadiusZ = 10f;
-    [SerializeField] private float spawnY = 0f;
-
     [SerializeField] private GameObject enemyPrefab;
-
+    public Transform spawner;
 
     void Start()
     {
@@ -18,12 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
-
-        float randomX = Random.Range(-spawnRadiusX, spawnRadiusX);
-        float randomZ = Random.Range(-spawnRadiusZ, spawnRadiusZ);
-        Vector3 spawnPos = (Vector3)transform.position + new Vector3(randomX, spawnY, randomZ);
-
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        Instantiate(enemyPrefab, spawner.position, spawner.rotation);
 
     }
 

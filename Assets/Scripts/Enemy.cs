@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     // enemy movement
+    public Transform target;
+    public float speed = 2f;
+    public Rigidbody rb;
 
 
     [SerializeField] private GameObject healthDrop;
@@ -30,14 +33,22 @@ public class Enemy : MonoBehaviour
         enemyHealth.value = currentHealth;
     }
 
+    void Update()
+    {
 
+    }
 
+    public void FollowPlayer()
+    {
+        Vector3 pos = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-
+        rb.MovePosition(pos);
+        transform.LookAt(target);
+    }
 
     public void EnemyTakeDamage()
     {
-        // enemy loses health based on how much dmg the spell does
+        currentHealth--; // or minus however much the spell is supposed to do
         enemyHealth.value = currentHealth;
 
         if (currentHealth <= 0)
@@ -56,8 +67,23 @@ public class Enemy : MonoBehaviour
 
             Destroy(this.gameObject);
         }
+    }
 
+
+    void OnTriggerEnter(Collider other) // activates once when the collider touches
+    {
+        if (other.CompareTag("Element"))
+        {
+            EnemyTakeDamage();
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            //do dmg to the player
+        }
 
     }
+    
+
 
 }
