@@ -62,7 +62,6 @@ public class ElementAttack : MonoBehaviour
             {
                 fireCountdownTimer = fireCountdownInterval;
                 ShootFire();
-                Debug.Log("Fire key pressed");
             }
         }
 
