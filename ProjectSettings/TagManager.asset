@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Element
+  - Pickup
+  - FirePickup
+  - WaterPickup
+  - ElectricityPickup
   layers:
   - Default
   - TransparentFX
