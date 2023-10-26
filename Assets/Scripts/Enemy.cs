@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
             randomTemp = Random.Range(1, 10);
             if (randomTemp <= 5)
             {
-                // spawn the health
+                Instantiate(healthDrop);
             }
             
 
