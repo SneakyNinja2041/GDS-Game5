@@ -24,8 +24,8 @@ public class MoveElement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Element collided with Enemy");
-            Destroy(gameObject);
+            //Debug.Log("Element collided with Enemy");
+            //Destroy(gameObject);
 
         }
     }

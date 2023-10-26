@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 580518478323314212}
   - component: {fileID: 3723420765160353483}
   - component: {fileID: 2563887520945699717}
+  - component: {fileID: 8626387027829005885}
   m_Layer: 0
   m_Name: Health (1)
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +109,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8626387027829005885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476170642044958504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb6003aa095b974a870be88d70b736d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &8724466360429436766
 GameObject:
   m_ObjectHideFlags: 0

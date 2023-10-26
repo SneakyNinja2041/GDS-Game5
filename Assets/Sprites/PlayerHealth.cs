@@ -41,5 +41,13 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1);
             Debug.Log("hit by enemy, -1 health");
         }
+
+      
+        if (other.CompareTag("Health"))
+        {
+            currentHealth++;
+
+        }
+       
     }
 }

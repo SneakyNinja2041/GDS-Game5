@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public bool isBossFight;
-    [SerializeField] GameObject bossUI;
 
     // camera to follow the player around the rooms
 
@@ -21,14 +20,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (isBossFight == true)
-        {
-            bossUI.SetActive(true);
-        }
-        else
-        {
-            bossUI.SetActive(false);
-        }
+
 
     }
 
