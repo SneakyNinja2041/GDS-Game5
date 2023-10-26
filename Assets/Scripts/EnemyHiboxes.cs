@@ -9,7 +9,7 @@ public class EnemyHiboxes : MonoBehaviour
     [SerializeField] private GameObject healthDrop;
 
     [SerializeField] private GameObject player;
-    PlayerHealth playerH;
+    //PlayerHealth playerH;
 
     public Transform enemy;
 
@@ -28,7 +28,7 @@ public class EnemyHiboxes : MonoBehaviour
         enemyHealth.maxValue = maxHealth;
         enemyHealth.value = currentHealth;
 
-        playerH = player.GetComponent<PlayerHealth>();
+        //playerH = player.GetComponent<PlayerHealth>();
     }
 
     public void EnemyTakeDamage()
@@ -65,7 +65,7 @@ public class EnemyHiboxes : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("hit player");
-            playerH.currentHealth--;
+            //playerH.currentHealth--;
         }
 
     }

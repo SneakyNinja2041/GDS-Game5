@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779edf51673e49c489fa17383b583bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricityUI: {fileID: 0}
+  electricityUI: {fileID: 3366992912091070911, guid: 98d609d9b98a08b439be3450101be945, type: 3}

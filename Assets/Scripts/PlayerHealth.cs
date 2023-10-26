@@ -34,6 +34,13 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    void GainHealth(int damage)
+    {
+        currentHealth += damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -43,10 +50,12 @@ public class PlayerHealth : MonoBehaviour
         }
 
       
-        if (other.CompareTag("Health"))
+        if (other.gameObject.CompareTag("Health"))
         {
-            currentHealth++;
-
+            //currentHealth++;
+            Debug.Log("health picked up");
+            //healthBar.SetHealth(currentHealth);
+            GainHealth(1);
         }
        
     }

@@ -118,3 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90a3610e4275a547843c414889334de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireUI: {fileID: 4357261724510344374, guid: 21fe696a4edbcb547a5a6d6c9a90a3b5, type: 3}

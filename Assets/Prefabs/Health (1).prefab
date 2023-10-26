@@ -101,7 +101,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -121,7 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb6003aa095b974a870be88d70b736d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  maxHealth: 20
+  currentHealth: 0
+  enemy: {fileID: 0}
+  healthBar: {fileID: 2084188771809322237, guid: 48546f11e2cfa40408b033d2866505ef, type: 3}
+  player: {fileID: 9148010129339426038, guid: 2276fc5c7ea3a8743b68f03a86d6c678, type: 3}
 --- !u!1 &8724466360429436766
 GameObject:
   m_ObjectHideFlags: 0

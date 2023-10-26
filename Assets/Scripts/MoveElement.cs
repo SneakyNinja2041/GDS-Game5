@@ -20,13 +20,18 @@ public class MoveElement : MonoBehaviour
     }
 
     // Destory the bullet when it collides with the Bullet Destroyer
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             //Debug.Log("Element collided with Enemy");
             //Destroy(gameObject);
 
+        }
+
+        if (collision.gameObject.CompareTag("Environment"))
+        {
+            Destroy(this.gameObject);
         }
     }
 }
