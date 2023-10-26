@@ -21,6 +21,7 @@ public class StoryButtons : MonoBehaviour
 
     public GameObject lizard1;
     public GameObject lizard2;
+    public GameObject lizard3;
 
     public void Next1()
     {
@@ -58,6 +59,9 @@ public class StoryButtons : MonoBehaviour
         context4UI.SetActive(false);
         context5Button.SetActive(true);
         context5UI.SetActive(true);
+
+        lizard2.SetActive(false);
+        lizard3.SetActive(true);
     }
 
     public void Play()
